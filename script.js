@@ -8,7 +8,6 @@ let operator = '';
 semuaTombol.forEach(tombol => {
     tombol.addEventListener('click', () => {
         const nilai = tombol.textContent;
-
         if(operasi.includes(nilai)){
             operator = nilai;
             angka1 = input.value;
@@ -29,7 +28,13 @@ semuaTombol.forEach(tombol => {
         } else {
             input.value += nilai;
         }
+           let r = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
 
+        let rgb = `rgb(${r}, ${g}, ${b})`;
+        input.style.border = ` 2px solid ${rgb}`
     });
 });
 
+// tes perubahan
